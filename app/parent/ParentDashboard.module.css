@@ -1,0 +1,384 @@
+.header {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.parentInfo h1 {
+  font-size: 2.5rem;
+  color: var(--text-main);
+}
+
+.childStats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 32px;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+.icon {
+  color: #6BCBCA;
+}
+
+.progressList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.progressItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-main);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.weekIndicator {
+  background: #FFD93D;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.lessonInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lessonInfo strong {
+  font-size: 1.1rem;
+}
+
+.lessonInfo span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.statusDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.done { background: #9ADE7B; }
+.doing { background: #FFD93D; }
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tip {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tip strong {
+  color: #FF8066;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.activityBox {
+  background: rgba(107, 203, 202, 0.1);
+  padding: 2rem;
+  border-radius: 24px;
+  border-left: 8px solid var(--primary-blue);
+  color: var(--text-main);
+}
+
+.addChildBtn {
+  background: #6BCBCA;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.childrenGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.childCard {
+  background: var(--bg-main);
+  padding: 1.5rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  border: 4px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.childCard:hover {
+  border-color: #FFD93D;
+  transform: translateY(-5px);
+}
+
+.childAvatar {
+  font-size: 3rem;
+}
+
+.childInfo h3 {
+  margin: 0;
+  color: var(--text-main);
+}
+
+.childInfo p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.viewBtn {
+  background: #FFD93D;
+  color: #2D3436;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+.link {
+  color: #6BCBCA;
+  font-weight: bold;
+}
+
+/* Edit and Delete Actions */
+.actionsRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.editBtn {
+  color: #6BCBCA;
+  background-color: rgba(107, 203, 202, 0.1);
+}
+
+.editBtn:hover {
+  background-color: rgba(107, 203, 202, 0.2);
+}
+
+.deleteBtn {
+  color: #FF8066;
+  background-color: rgba(255, 128, 102, 0.1);
+}
+
+.deleteBtn:hover {
+  background-color: rgba(255, 128, 102, 0.2);
+}
+
+/* Edit Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: var(--text-main);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.formGroup label {
+  font-weight: bold;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.formInput {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  background: var(--bg-card);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancelBtn {
+  background: var(--bg-main);
+  border: 2px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.cancelBtn:hover {
+  background: var(--border-color);
+  color: var(--text-main);
+}
+
+.saveBtn {
+  background: #6BCBCA;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.saveBtn:hover {
+  filter: brightness(0.9);
+}
+
+.saveBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.errorMsg {
+  color: #FF8066;
+  font-size: 0.9rem;
+  margin: 0;
+}
+

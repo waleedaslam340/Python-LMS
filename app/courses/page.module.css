@@ -1,0 +1,151 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: calc(100vh - 80px);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-main);
+}
+
+.title {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--rounded-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--border-color);
+  box-shadow: 0 10px 24px var(--shadow-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px var(--shadow-color);
+}
+
+.pythonCard {
+  border-top: 5px solid var(--primary-yellow);
+}
+
+.htmlCard {
+  border-top: 5px solid var(--primary-blue);
+}
+
+.computerCard,
+.networkCard,
+.digestCard {
+  border-top: 5px solid var(--primary-purple);
+}
+
+.comingSoon {
+  opacity: 0.75;
+  cursor: not-allowed;
+  pointer-events: none;
+  position: relative;
+}
+
+.comingSoon:hover {
+  transform: none;
+  box-shadow: 0 10px 24px var(--shadow-color);
+}
+
+.comingSoonBadge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--primary-yellow);
+  color: #2D3436;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.45rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.cardDesc {
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.startBtn {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.85rem 1.5rem;
+  border-radius: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.card:hover .startBtn {
+  background-color: #5ab8b7;
+}
+
+.comingSoonBtn {
+  background-color: var(--bg-card-secondary);
+  color: var(--text-muted);
+  border: 2px solid var(--border-color);
+}
+
+.backLink {
+  margin-top: 2rem;
+  width: auto;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
