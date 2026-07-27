@@ -13,7 +13,6 @@ import {
   Star, 
   ChevronRight, 
   CheckCircle,
-  Layout,
   Terminal
 } from 'lucide-react';
 import { getLocalCompletedLessons } from '@/lib/progress';
@@ -113,12 +112,12 @@ export default function KidDashboard() {
               </div>
               <ChevronRight />
             </div>
-            <div style={{ marginTop: '2rem' }}>
+            <div className={styles.progressWrap}>
               <ProgressBar progress={progressPercent} label="Course Progress" />
             </div>
           </section>
 
-          <section className={`${styles.card} ${styles.lessonSection}`} style={{ marginTop: '2rem' }}>
+          <section className={`${styles.card} ${styles.lessonSection}`}>
             <h2><Terminal className={styles.icon} /> Recent Lessons</h2>
             <div className={styles.missionList}>
               {curriculum.slice(0, 5).map(lesson => {
@@ -129,7 +128,7 @@ export default function KidDashboard() {
                     className={styles.missionItem}
                     onClick={() => router.push(`/lessons/${lesson.week}`)}
                   >
-                    <div className={styles.missionIcon} style={{ background: isDone ? '#9ADE7B' : '#FFD93D' }}>
+                    <div className={`${styles.missionIcon} ${isDone ? styles.missionIconDone : ''}`}>
                       {isDone ? '✅' : '📝'}
                     </div>
                     <div className={styles.missionInfo}>
@@ -141,18 +140,9 @@ export default function KidDashboard() {
               })}
             </div>
             <button 
+              type="button"
               onClick={() => router.push('/')}
-              style={{ 
-                marginTop: '1.5rem', 
-                background: 'none', 
-                border: 'none', 
-                color: '#6BCBCA', 
-                fontWeight: 700, 
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}
+              className={styles.seeAllBtn}
             >
               See all lessons <ChevronRight size={16} />
             </button>
@@ -175,10 +165,10 @@ export default function KidDashboard() {
             </div>
           </section>
 
-          <section className={styles.card} style={{ marginTop: '2rem' }}>
+          <section className={`${styles.card} ${styles.sidebarCard}`}>
             <h2><Star className={styles.icon} /> Daily Tip</h2>
-            <p style={{ color: '#636E72', lineHeight: 1.6 }}>
-              Always remember to talk to your Rubber Duck! 🦆 If you explain your code to a duck, you'll often find the solution yourself!
+            <p className={styles.tipText}>
+              Always remember to talk to your Rubber Duck! 🦆 If you explain your code to a duck, you&apos;ll often find the solution yourself!
             </p>
           </section>
         </aside>

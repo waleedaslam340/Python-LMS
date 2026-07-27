@@ -17,8 +17,8 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: 'Python for Kids 🐍',
-  description: 'Learn Python the fun way!',
+  title: 'Python Mission Control',
+  description: 'Learn Python and HTML the fun way — missions for kids.',
 };
 
 export default function RootLayout({

@@ -656,13 +656,13 @@
 .quizSectionTitle {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #2D3436;
+  color: var(--text-main);
   margin: 0 0 0.25rem;
 }
 
 .quizSectionSub {
   font-size: 0.9rem;
-  color: #636E72;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -690,12 +690,12 @@
 
 .quizProgressLabel {
   font-size: 0.8rem;
-  color: #b2bec3;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
 .quizProgressTrack {
-  background: #f1f2f6;
+  background: var(--bg-main);
   border-radius: 99px;
   height: 6px;
   overflow: hidden;
@@ -729,7 +729,7 @@
 .quizQText {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #2D3436;
+  color: var(--text-main);
   line-height: 1.6;
   margin: 0;
 }
@@ -762,13 +762,13 @@
 }
 
 .quizOption:hover:not(:disabled) {
-  border-color: #6BCBCA;
-  background: #f0fafa;
+  border-color: var(--primary-blue);
+  background: rgba(107, 203, 202, 0.12);
 }
 
 .quizOptionSelected {
-  border-color: #6BCBCA;
-  background: #e8f8f8;
+  border-color: var(--primary-blue);
+  background: rgba(107, 203, 202, 0.18);
 }
 
 .quizOptionCorrect {
@@ -784,8 +784,8 @@
 }
 
 .quizOptionLetter {
-  background: #dfe6e9;
-  color: #636E72;
+  background: var(--bg-card-secondary);
+  color: var(--text-muted);
   font-weight: 800;
   font-size: 0.8rem;
   width: 28px;
@@ -881,13 +881,13 @@
 .quizResultTitle {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #2D3436;
+  color: var(--text-main);
   margin: 0;
 }
 
 .quizResultScore {
   font-size: 1.1rem;
-  color: #636E72;
+  color: var(--text-muted);
   margin: 0;
 }
 
