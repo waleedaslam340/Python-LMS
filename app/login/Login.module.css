@@ -1,22 +1,27 @@
 .container {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-soft);
   padding: 2rem;
 }
 
 .card {
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 3rem;
-  border-radius: 40px;
+  border-radius: 36px;
   box-shadow: 0 20px 40px var(--shadow-color);
   max-width: 550px;
   width: 100%;
   text-align: center;
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease;
+}
+
+:global([data-theme='dark']) .card {
+  background: rgba(20, 28, 43, 0.82);
 }
 
 .header {
@@ -195,8 +200,8 @@
 }
 
 .googleBtn:hover {
-  background: #f8f9fa;
-  border-color: #eee;
+  background: var(--bg-card-secondary);
+  border-color: var(--border-color);
 }
 
 .backBtn {

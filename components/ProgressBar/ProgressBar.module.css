@@ -23,6 +23,7 @@
   height: 100%;
   background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
   border-radius: 12px;
+  transition: width 0.5s ease;
 }
 
 .message {
